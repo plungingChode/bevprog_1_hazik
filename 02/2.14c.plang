@@ -1,0 +1,19 @@
+PROGRAM p214b
+   VALTOZOK:
+      s, from, to: SZOVEG,
+      i: EGESZ
+
+   BE: s, from, to
+
+   i := s @ from
+   CIKLUS AMIG i /= |s|
+      HA i = 0 AKKOR
+         s := to + s[|from|:|s|]
+      KULONBEN
+         s := s[0:i] + to + s[i + |from|:|s|]
+      HA_VEGE
+      i := s @ from
+   CIKLUS_VEGE
+
+   KI: s
+PROGRAM_VEGE

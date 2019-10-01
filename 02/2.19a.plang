@@ -1,0 +1,13 @@
+PROGRAM p219a
+   VALTOZOK:
+      x, i, n: EGESZ
+
+   BE: n
+
+   i := 0
+   CIKLUS AMIG i < n
+      BE: x
+      KI: (x DIV 2), ' '
+      i := i + 1
+   CIKLUS_VEGE
+PROGRAM_VEGE

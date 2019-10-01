@@ -1,0 +1,11 @@
+PROGRAM p213a
+   VALTOZOK:
+      nev: SZOVEG,
+      spc: EGESZ
+   
+   BE: nev
+
+   spc := nev @ ' '
+   
+   KI: nev[0], '.', nev[spc + 1], '.'
+PROGRAM_VEGE

@@ -1,0 +1,22 @@
+PROGRAM p215
+   VALTOZOK:
+      s: SZOVEG,
+      i: EGESZ,
+      isSeparator: LOGIKAI
+
+   BE: s
+
+   i := 0
+   isSeparator := igaz
+   CIKLUS AMIG i < |s|
+      HA (isSeparator) ES BETU s[i] AKKOR
+         s[i] := NAGY s[i]
+         isSeparator := hamis
+      HA_VEGE
+ 
+      isSeparator := (NEM BETU s[i]) ES (NEM SZAM s[i])
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: s
+PROGRAM_VEGE

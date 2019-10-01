@@ -1,0 +1,20 @@
+PROGRAM p213b
+   VALTOZOK:
+      nev, monogram: SZOVEG,
+      i: EGESZ
+   
+   BE: nev
+
+   monogram := ""
+   monogram := monogram + nev[0] + '.'
+
+   i := 0
+   CIKLUS AMIG i < |nev|
+      HA nev[i] = ' ' AKKOR
+         monogram := monogram + nev[i + 1] + '.'
+      HA_VEGE
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: monogram
+PROGRAM_VEGE

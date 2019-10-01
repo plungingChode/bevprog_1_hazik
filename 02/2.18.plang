@@ -1,0 +1,22 @@
+PROGRAM p218
+   VALTOZOK:
+      s: SZOVEG,
+      i: EGESZ
+
+   BE: s
+
+   i := 0
+   CIKLUS AMIG i < |s|
+      HA (BETU s[i]) AKKOR
+         HA (NAGY s[i] = s[i]) AKKOR
+            s[i] := KIS s[i]
+         KULONBEN
+            s[i] := NAGY s[i]
+         HA_VEGE
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: s
+PROGRAM_VEGE

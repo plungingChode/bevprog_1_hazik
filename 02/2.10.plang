@@ -1,0 +1,17 @@
+PROGRAM p210
+   VALTOZOK:
+      n: EGESZ,
+      r, c, prev: VALOS
+   
+   BE: n
+   r := n - 1
+   KI: 1, ' '
+
+   c := 0
+   prev := 1
+   CIKLUS AMIG c < r
+      c := c + 1
+      prev := prev * ((r + 1 - c) / c)
+      KI: EGESZ prev, ' '
+   CIKLUS_VEGE
+PROGRAM_VEGE
