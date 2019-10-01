@@ -1,0 +1,14 @@
+PROGRAM p19a
+  VALTOZOK:
+     str: SZOVEG,
+     spc, offs: EGESZ
+   BE: str
+
+   offs := 0
+   CIKLUS AMIG (NEM BETU str[offs]) ES (NEM SZAM str[offs])
+      offs := offs + 1
+   CIKLUS_VEGE
+
+   spc := str[offs:|str| - 1] @ ' '
+   KI: str[offs:spc + offs]
+PROGRAM_VEGE

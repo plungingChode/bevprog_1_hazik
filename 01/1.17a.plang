@@ -1,0 +1,8 @@
+program p1
+  valtozok:
+    str: szoveg
+
+  be: str
+  ki: str[0] = str[|str| - 1]
+
+program_vege

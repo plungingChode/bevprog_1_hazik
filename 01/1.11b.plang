@@ -1,0 +1,10 @@
+PROGRAM p11b
+   VALTOZOK:
+      x1, y1, x2, y2, x, y: EGESZ
+   
+   BE: x1, y1, x2, y2
+   x := |x1 - x2|
+   y := |y1 - y2|
+
+   KI: ((x ^ 2) + (y ^ 2)) ^ 0.5
+PROGRAM_VEGE

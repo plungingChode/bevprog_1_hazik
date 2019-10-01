@@ -1,0 +1,13 @@
+PROGRAM p118
+  VALTOZOK:
+    e, m: SZOVEG
+
+  BE: e, m
+  
+  HA |e| >= 5 ES |m| >= 5 AKKOR
+     KI: e[0:5] = m[0:5]
+  KULONBEN
+     KI: hamis
+  HA_VEGE
+
+PROGRAM_VEGE

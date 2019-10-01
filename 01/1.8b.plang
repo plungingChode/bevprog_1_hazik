@@ -1,0 +1,8 @@
+program p1
+  valtozok:
+    a, b, n: valos
+  
+  be: a, b, n
+  ki: b + (b - a) * (n - 2)
+
+program_vege

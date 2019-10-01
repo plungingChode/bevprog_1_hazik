@@ -1,0 +1,8 @@
+program p1
+  valtozok:
+    str: szoveg,
+    c: KARAKTER
+
+  be: str
+  ki: KIS str[0] = KIS str[|str| - 1]
+program_vege

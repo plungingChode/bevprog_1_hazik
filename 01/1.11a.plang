@@ -1,0 +1,8 @@
+PROGRAM p11
+   VALTOZOK:
+      x, y: EGESZ
+   
+   BE: x, y
+   KI: ((x ^ 2) + (y ^ 2)) ^ 0.5
+   
+PROGRAM_VEGE

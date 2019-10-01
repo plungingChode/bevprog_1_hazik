@@ -1,0 +1,7 @@
+PROGRAM p15
+   VALTOZOK:
+      s: SZOVEG
+
+   BE: s
+   KI: NEM SZAM s[0] ES s[0] = NAGY s[0]
+PROGRAM_VEGE

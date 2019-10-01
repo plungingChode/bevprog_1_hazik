@@ -1,0 +1,7 @@
+PROGRAM p15
+   VALTOZOK:
+      s: SZOVEG
+
+   BE: s
+   KI: SZAM s[|s| - 1]
+PROGRAM_VEGE

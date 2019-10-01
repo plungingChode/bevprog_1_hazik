@@ -1,0 +1,18 @@
+PROGRAM p121c
+  VALTOZOK:
+     str1, str2: SZOVEG,
+     first: EGESZ
+     
+   BE: str1, str2
+   first := (str1 @ str2)
+
+   HA (first /= |str1|) AKKOR
+      HA (first = 0) AKKOR
+         str1 := str1[first + |str2|:|str1|]
+      KULONBEN
+         str1 := str1[0:first] + str1[first + |str2|:|str1|]
+      HA_VEGE
+   HA_VEGE
+
+   KI: str1
+PROGRAM_VEGE

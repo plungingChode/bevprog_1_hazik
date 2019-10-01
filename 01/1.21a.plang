@@ -1,0 +1,7 @@
+PROGRAM p121a
+  VALTOZOK:
+     str1, str2: SZOVEG
+   
+   BE: str1, str2
+   KI: (str2 @ str1) /= |str2|
+PROGRAM_VEGE

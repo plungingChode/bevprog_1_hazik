@@ -1,0 +1,7 @@
+PROGRAM p18c
+  VALTOZOK:
+    a, b, n: VALOS
+  
+  BE: a, b, n
+  KI: b * (b / a) ^ (n - 2)
+PROGRAM_VEGE
