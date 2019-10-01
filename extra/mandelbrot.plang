@@ -1,0 +1,58 @@
+PROGRAM p32
+   VALTOZOK:
+      c, x, xn: VALOS[2],
+      abs, re, z, y: VALOS,
+      i: EGESZ,
+      inf: LOGIKAI
+
+
+
+   y := 1
+   CIKLUS AMIG (y >= -1)
+   z := -2
+   CIKLUS AMIG (z <= 1)
+     
+      
+         c[0] := z
+         c[1] := y
+
+         x[0] := c[0]
+         x[1] := c[1]
+
+   i := 0
+   inf := HAMIS
+   CIKLUS AMIG i < 10
+      re := x[0]
+
+      **x ^ 2
+      x[0] := re ^ 2 - x[1] ^ 2
+      x[1] := 2 * re * x[1] 
+ 
+      **x + c
+      xn[0] := x[0] + c[0]
+      xn[1] := x[1] + c[1]
+
+      **abs
+      abs := |(xn[0] ^ 2 - xn[1] ^ 2)| ^ 0.5
+
+      HA (abs >= 2) AKKOR
+         inf := IGAZ
+      HA_VEGE
+
+      x[0] := xn[0]
+      x[1] := xn[1]
+      i := i + 1
+   CIKLUS_VEGE
+z := z + 0.1
+         
+         HA (inf) AKKOR
+            KI: ' '
+         KULONBEN
+            KI: '*'
+         HA_VEGE
+      CIKLUS_VEGE
+      y := y - 0.1
+      KI: SV
+   CIKLUS_VEGE
+
+PROGRAM_VEGE
