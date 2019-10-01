@@ -1,0 +1,22 @@
+PROGRAM p32
+   VALTOZOK:
+      n, i: EGESZ
+   
+   BE: n
+   i := 2
+
+   CIKLUS AMIG i < n
+      HA (n MOD i = 0) AKKOR
+         n := n DIV i
+      KULONBEN
+         i := i + 1
+      HA_VEGE
+   CIKLUS_VEGE
+   
+   HA (i < n) AKKOR
+      KI: i
+   KULONBEN
+      KI: -1
+   HA_VEGE
+
+PROGRAM_VEGE

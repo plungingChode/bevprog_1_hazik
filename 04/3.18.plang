@@ -1,0 +1,33 @@
+PROGRAM p3.18
+   VALTOZOK:
+      n, i, num, d, cnt: EGESZ,
+      van: LOGIKAI
+
+   BE: n
+   i := 0
+   cnt := 0
+
+   CIKLUS AMIG (i < n)
+      BE: num
+      van := HAMIS
+      d := 2
+      CIKLUS AMIG (d < num ES NEM van)
+         HA (num MOD d = 0) AKKOR
+            van := IGAZ
+         HA_VEGE
+         d := d + 1
+      CIKLUS_VEGE
+
+      HA (NEM van ES num > 1) AKKOR
+         cnt := cnt + 1
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: cnt
+PROGRAM_VEGE
+
+** 5
+** 2 4 6 8 10 inputra a 'jo' megoldas 0,
+** de 2 primszam...

@@ -1,0 +1,27 @@
+PROGRAM p3.36
+   VALTOZOK:
+      p, p_max: EGESZ[2],
+      n, i: EGESZ,
+      dist, max : VALOS
+
+   BE: n
+  
+   i := 0
+   max := 0
+
+   CIKLUS AMIG (i < n)
+      BE: p[0], p[1]
+      dist := (p[0] ^ 2 + p[1] ^ 2) ^ 0.5
+
+      HA (dist > max) AKKOR
+         max := dist
+         p_max[0] := p[0]
+         p_max[1] := p[1]
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: p_max[0], ' ', p_max[1]
+
+PROGRAM_VEGE

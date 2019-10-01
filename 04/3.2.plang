@@ -1,0 +1,23 @@
+PROGRAM p3.2
+   VALTOZOK:
+      n, i, sum: EGESZ
+   
+   BE: n
+   i := 2
+   sum := 0   
+
+   CIKLUS AMIG i <= n
+      HA (n MOD i = 0) AKKOR
+         sum := sum + i
+         n := n DIV i
+      KULONBEN
+         i := i + 1
+      HA_VEGE
+   CIKLUS_VEGE
+   
+   KI: sum
+
+PROGRAM_VEGE
+
+** azt mondja, h BEMENET=10-re a megoldas 18,
+** de tuti nem (10 = 5 * 2 -> 5 + 2 = 7)

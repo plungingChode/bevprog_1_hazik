@@ -1,0 +1,15 @@
+PROGRAM p32
+   VALTOZOK:
+      n, i: EGESZ,
+      sum, temp: VALOS
+
+   BE: n
+   i := 0
+   sum := 0
+   CIKLUS AMIG (i < n)
+      BE: temp
+      sum := sum + temp
+      i := i + 1
+   CIKLUS_VEGE
+   KI: sum
+PROGRAM_VEGE

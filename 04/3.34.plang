@@ -1,0 +1,37 @@
+PROGRAM p3.36
+   VALTOZOK:
+      p0, p1, p2: EGESZ[2],
+      n, i: EGESZ,
+      k: VALOS
+
+   BE: n
+   
+   ** p0-hoz nem nyulunk, a vegen meg kell
+   BE: p0[0], p0[1]
+
+   BE: p1[0], p1[1]
+   BE: p2[0], p2[1]
+  
+   i := 3
+   k := (((p0[0] - p1[0]) ^ 2) + ((p0[1] - p1[1]) ^ 2)) ^ 0.5
+   k := k + (((p1[0] - p2[0]) ^ 2) + ((p1[1] - p2[1]) ^ 2)) ^ 0.5
+
+   ** sokszog min. 3 oldal, elhisszuk h jol
+   ** van megadva
+   HA (n >= 3) AKKOR
+      CIKLUS AMIG (i < n)
+         p1[0] := p2[0]
+         p1[1] := p2[1]
+
+         BE: p2[0], p2[1]
+         k := k + (((p1[0] - p2[0]) ^ 2) + ((p1[1] - p2[1]) ^ 2)) ^ 0.5
+         
+         i := i + 1
+      CIKLUS_VEGE
+   HA_VEGE
+
+   ** utolso oldal: p0 es az utolso pont tavolsaga
+   k := k + (((p2[0] - p0[0]) ^ 2) + ((p2[1] - p0[1]) ^ 2)) ^ 0.5
+
+   KI: k
+PROGRAM_VEGE

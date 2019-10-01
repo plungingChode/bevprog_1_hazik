@@ -1,0 +1,21 @@
+PROGRAM p3.21
+   VALTOZOK:
+      n, i, cnt: EGESZ,
+      s: SZOVEG
+
+   BE: s
+
+   n := |s|
+   i := 0
+   cnt := 0
+
+   CIKLUS AMIG (i < n)
+      HA (s[i] = 'a') AKKOR
+         cnt := cnt + 1
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: cnt
+PROGRAM_VEGE

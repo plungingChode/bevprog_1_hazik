@@ -1,0 +1,23 @@
+PROGRAM p3.24
+   VALTOZOK:
+      n, i, max: EGESZ,
+      s, longest: SZOVEG
+
+   BE: n
+   BE: longest
+
+   i := 1
+   max := |longest|
+
+   CIKLUS AMIG (i < n)
+      BE: s
+      HA (|s| > max) AKKOR
+         longest := s
+         max := |s|
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: longest
+PROGRAM_VEGE
