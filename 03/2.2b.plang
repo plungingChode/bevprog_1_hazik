@@ -1,0 +1,26 @@
+PROGRAM p2.1e
+   VALTOZOK:
+      arr: EGESZ[3],
+      n, new_n, i, temp: EGESZ
+
+   BE: arr[0], arr[1], arr[2]
+   
+   n := 3
+   CIKLUS
+      new_n := 0
+      i := 1
+      CIKLUS AMIG i < n
+         HA arr[i - 1] > arr[i] AKKOR
+            temp := arr[i]
+            arr[i] := arr[i - 1]
+            arr[i - 1] := temp
+            new_n := i
+         HA_VEGE
+         i := i + 1
+      CIKLUS_VEGE
+      n := new_n
+   AMIG n > 1
+
+   KI: arr[0], ' ', arr[1], ' ', arr[2]
+
+PROGRAM_VEGE

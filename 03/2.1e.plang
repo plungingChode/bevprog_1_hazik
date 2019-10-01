@@ -1,0 +1,23 @@
+PROGRAM p2.1e
+   VALTOZOK:
+      n, i, j: EGESZ
+
+   BE: n
+
+   i := 0
+   CIKLUS AMIG i < n
+      j := 0
+      CIKLUS AMIG j < n
+         HA ((i + j) MOD 2 = 1) AKKOR
+            KI: ' '
+         KULONBEN
+            KI: '*', '*'
+         HA_VEGE
+      
+         j := j + 1
+      CIKLUS_VEGE
+      KI: SV
+      i := i + 1
+   CIKLUS_VEGE
+
+PROGRAM_VEGE

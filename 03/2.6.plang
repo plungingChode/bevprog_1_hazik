@@ -1,0 +1,12 @@
+PROGRAM p2.6
+   VALTOZOK:
+      n, i: EGESZ
+
+   BE: n
+
+   i := 0
+   CIKLUS AMIG i < n
+      KI: RND 100, ' '
+      i := i + 1
+   CIKLUS_VEGE
+PROGRAM_VEGE

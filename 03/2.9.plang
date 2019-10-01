@@ -1,0 +1,20 @@
+PROGRAM p2.9
+   VALTOZOK:
+      a, b, c: EGESZ
+   
+   a := 1
+   CIKLUS AMIG a < 10
+      b := 1
+      CIKLUS AMIG b < 10
+         c := 1
+         CIKLUS AMIG c < 10
+            HA (b ^ 2 - (4 * a * c) = 0) AKKOR
+               KI: a, "x^2 + ", b, "x + ", c, " = 0", SV
+            HA_VEGE
+            c := c + 1
+         CIKLUS_VEGE
+         b := b + 1
+      CIKLUS_VEGE
+      a := a + 1
+   CIKLUS_VEGE
+PROGRAM_VEGE

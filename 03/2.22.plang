@@ -1,0 +1,19 @@
+PROGRAM p2.22
+   VALTOZOK:
+      s1, s2: SZOVEG,
+      i, min: EGESZ
+
+   BE: s1, s2
+   
+   min := |s2|
+   HA (|s1| < min) AKKOR min := |s1| HA_VEGE
+   
+   i := 0
+   CIKLUS AMIG i < min
+      HA (s1[i] = s2[i]) AKKOR
+         KI: i, ' '
+      HA_VEGE
+
+      i := i + 1
+   CIKLUS_VEGE
+PROGRAM_VEGE

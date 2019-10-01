@@ -1,0 +1,14 @@
+PROGRAM p2.24
+   VALTOZOK:
+      s: SZOVEG,
+      n: EGESZ
+
+   BE: s
+
+   n := 1
+   CIKLUS AMIG |s| /= 0
+      KI: n, ' ', s, SV
+      n := n + 1
+      BE: s
+   CIKLUS_VEGE
+PROGRAM_VEGE

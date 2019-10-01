@@ -1,0 +1,16 @@
+PROGRAM p2.16a
+   VALTOZOK:
+      str, del: SZOVEG,
+      i: EGESZ
+
+   BE: str, del
+
+   i := str @ del
+   
+   CIKLUS AMIG i /= |str|
+      str := str[0 : i] + str[i + |del| : |str|]
+      i := str @ del
+   CIKLUS_VEGE
+   
+   KI: str
+PROGRAM_VEGE
