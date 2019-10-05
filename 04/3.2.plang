@@ -1,8 +1,10 @@
 PROGRAM p3.2
    VALTOZOK:
-      n, i, sum: EGESZ
+      n, orig, i, sum: EGESZ
    
-   BE: n
+   BE: n 
+   orig := n
+
    i := 2
    sum := 0   
 
@@ -15,9 +17,7 @@ PROGRAM p3.2
       HA_VEGE
    CIKLUS_VEGE
    
-   KI: sum
+   ** valodi osztok + onmaga + 1
+   KI: sum + orig + 1
 
 PROGRAM_VEGE
-
-** azt mondja, h BEMENET=10-re a megoldas 18,
-** de tuti nem (10 = 5 * 2 -> 5 + 2 = 7)

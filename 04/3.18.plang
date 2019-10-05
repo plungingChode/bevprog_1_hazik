@@ -10,6 +10,7 @@ PROGRAM p3.18
    CIKLUS AMIG (i < n)
       BE: num
       van := HAMIS
+
       d := 2
       CIKLUS AMIG (d < num ES NEM van)
          HA (num MOD d = 0) AKKOR
@@ -18,7 +19,9 @@ PROGRAM p3.18
          d := d + 1
       CIKLUS_VEGE
 
-      HA (NEM van ES num > 1) AKKOR
+      ** 2 vmiert nem primszam, ugyhogy
+      ** ki kell szurni
+      HA (NEM van ES num > 2) AKKOR
          cnt := cnt + 1
       HA_VEGE
 
