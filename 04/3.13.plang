@@ -9,7 +9,7 @@ PROGRAM p32
 
    CIKLUS AMIG (i < n)
       BE: temp
-      sum := temp ^ 0.5
+      sum := sum + temp ^ 0.5
       i := i + 1
    CIKLUS_VEGE
    KI: sum
