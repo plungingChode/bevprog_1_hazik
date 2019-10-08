@@ -1,0 +1,21 @@
+PROGRAM p3.16
+   VALTOZOK:
+      n, i, x1, x2: EGESZ,
+      sum: VALOS
+
+   BE: n
+   BE: x1
+
+   i := 1
+   sum := 0
+   
+   CIKLUS AMIG i < n
+      BE: x2
+      sum := sum + |(x1 - x2)|
+      x1 := x2
+      i := i + 1
+   CIKLUS_VEGE
+
+   KI: sum / (n - 1)
+
+PROGRAM_VEGE
