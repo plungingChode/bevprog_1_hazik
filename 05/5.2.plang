@@ -1,0 +1,25 @@
+PROGRAM p5.2
+  VÁLTOZÓK:
+    i, sz: EGÉSZ,
+    v: EGÉSZ[10],
+    avg: VALÓS
+ 
+  ** kiindulasi vektor
+  i := 0
+  sz := 10
+  CIKLUS AMÍG (i < sz)
+    v[i] := RND sz
+    i := i + 1
+  CIKLUS_VÉGE
+
+  ** atlag
+  i := 0
+  avg := 0
+  CIKLUS AMÍG (i < sz)
+    avg := avg + v[i]
+    i := i + 1
+  CIKLUS_VÉGE
+  avg := avg / sz
+  KI: avg
+
+PROGRAM_VÉGE

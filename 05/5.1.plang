@@ -1,0 +1,14 @@
+PROGRAM p2.32
+  VÁLTOZÓK:
+    i, sz: EGÉSZ,
+    v: EGÉSZ[10]
+ 
+  ** kiindulasi vektor
+  i := 0
+  sz := 10
+  CIKLUS AMÍG (i < sz)
+    v[i] := RND sz
+    KI: v[i], ' '
+    i := i + 1
+  CIKLUS_VÉGE  
+PROGRAM_VÉGE

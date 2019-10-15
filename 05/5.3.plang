@@ -1,0 +1,32 @@
+PROGRAM p5.3
+  VÁLTOZÓK:
+    i, sz: EGÉSZ,
+    v: EGÉSZ[10],
+    avg, spread: VALÓS
+ 
+  ** kiindulasi vektor
+  i := 0
+  sz := 10
+  CIKLUS AMÍG (i < sz)
+    v[i] := RND sz
+    i := i + 1
+  CIKLUS_VÉGE
+
+  ** atlag
+  i := 0
+  avg := 0
+  CIKLUS AMÍG (i < sz)
+    avg := avg + v[i]
+    i := i + 1
+  CIKLUS_VÉGE
+  avg := avg / sz
+
+  ** szoras
+  i := 0
+  spread := 0
+  CIKLUS AMÍG (i < sz)
+    spread := spread + (|avg - v[i]|)
+    i := i + 1
+  CIKLUS_VÉGE
+  KI: spread / sz
+PROGRAM_VÉGE

@@ -1,0 +1,28 @@
+PROGRAM p3.10
+   VALTOZOK:
+     num: EGESZ[999],
+     n, i, cnt: EGESZ,
+     avg: VALOS
+  
+   BE: n
+   i := 0
+   
+   avg := 0
+   CIKLUS AMIG (i < n)
+      BE: num[i]
+      avg := avg + num[i]
+      i := i + 1
+   CIKLUS_VEGE
+   avg := avg / n
+
+   i := 0
+   cnt := 0
+   CIKLUS AMIG (i < n)
+      HA (num[i] < avg) AKKOR
+         cnt := cnt + 1
+      HA_VEGE
+      i := i + 1
+   CIKLUS_VEGE
+   
+   KI: cnt
+PROGRAM_VEGE

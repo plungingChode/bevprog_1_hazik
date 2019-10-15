@@ -1,0 +1,28 @@
+PROGRAM p2.32
+  VÁLTOZÓK:
+    i, j, sz: EGÉSZ,
+    v: EGÉSZ[10],
+    hasduplicate: LOGIKAI
+ 
+  ** kiindulasi vektor
+  i := 0
+  sz := 10
+  CIKLUS AMÍG (i < sz)
+    v[i] := RND sz
+    i := i + 1
+  CIKLUS_VÉGE
+
+  ** van- e egyforma
+  i := 0
+  j := 0
+  hasduplicate := HAMIS
+  CIKLUS AMÍG (i < sz ÉS NEM hasduplicate)
+    CIKLUS AMÍG (j < sz ÉS NEM hasduplicate)
+      hasduplicate := (i /= j ÉS v[i] = v[j])
+      j := j + 1
+    CIKLUS_VÉGE
+    i := i + 1
+  CIKLUS_VÉGE
+
+  KI: hasduplicate
+PROGRAM_VÉGE
