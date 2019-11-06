@@ -2,9 +2,8 @@
 #include <ctime>
 #include <iostream>
 #include <vector>
-#include <numeric>
 
-// 5.2. Vektor átlaga
+// 5.2. Vektor Ã¡tlaga
 int main()
 {
     // random vektor
