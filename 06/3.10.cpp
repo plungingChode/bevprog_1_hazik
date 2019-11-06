@@ -11,19 +11,19 @@ int main()
     int arr[n];
 
     double avg = 0;
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++)
     {
          std::cin >> arr[i];
          avg += arr[i];
     }
     avg /= n;
 
-    int tobb = 0;
-    for (unsigned int i = 0; i < szamok.size(); i++)
+    int kevesebb = 0;
+    for (int i = 0; i < n; i++)
     {
-        if (szamok[i] > avg) tobb++;
+        if (arr[i] < avg) kevesebb++;
     }
 
-    std::cout << tobb;
+    std::cout << kevesebb;
     return 0;
 }
