@@ -15,7 +15,6 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        std::cout << i << ' ';
         std::getline(std::cin, str);
 
         if (str.length() > max_str.length())
