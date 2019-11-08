@@ -1,8 +1,7 @@
 #include <vector>
-#include <iostream>
 
-// 6.8. Valósítsd meg az int hany(vector<double> v, double ez) függvényt,
-//      ami a paraméterül kapott vektorban megszámolja, hogy hány "ez" van benne
+// 6.8. ValÃ³sÃ­tsd meg az int hany(vector<double> v, double ez) fÃ¼ggvÃ©nyt,
+//      ami a paramÃ©terÃ¼l kapott vektorban megszÃ¡molja, hogy hÃ¡ny "ez" van benne
 int hany(std::vector<double> v, double ez)
 {
     double db = 0;
@@ -14,11 +13,4 @@ int hany(std::vector<double> v, double ez)
         }
     }
     return db;
-}
-
-int main()
-{
-    std::vector<double> v = {1, 1, 1, 2};
-    std::cout << hany(v, 1);
-    return 0;
 }
