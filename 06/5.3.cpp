@@ -4,7 +4,7 @@
 #include <vector>
 #include <cmath>
 
-// 5.3. Vektor szórása (átlagtól való eltérések átlaga)
+// 5.3. Vektor szÃ³rÃ¡sa (Ã¡tlagtÃ³l valÃ³ eltÃ©rÃ©sek Ã¡tlaga)
 int main()
 {
     // random vektor
@@ -25,20 +25,14 @@ int main()
     avg /= v.size();
 
     // szoras
-    std::vector<double> elteresek(v.size());
+    double szoras = 0;
     for (unsigned int i = 0; i < v.size(); i++)
     {
-        elteresek.push_back(std::abs(avg - v[i]));
+        szoras += std::abs(avg - v[i]);
     }
+    szoras /= v.size();
 
-    double var = 0;
-    for (unsigned int i = 0; i < elteresek.size(); i++)
-    {
-        var += elteresek[i];
-    }
-    var /= elteresek.size();
-
-    std::cout << var << std::endl;
+    std::cout << szoras;
 
     return 0;
 }
