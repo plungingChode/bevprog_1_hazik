@@ -1,6 +1,6 @@
 #include <iostream>
 
-// 3.1. Van-e k�t egyforma elem a vektorban?
+// 3.1. Számítsd ki egy szám faktoriálisát.
 int main()
 {
     int szam;
