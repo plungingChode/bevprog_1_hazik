@@ -1,13 +1,13 @@
 #include <iostream>
 
-// 3.5. Add meg két természetes szám legnagyobb közös osztóját.
+// 3.5. Add meg kÃ©t termÃ©szetes szÃ¡m legnagyobb kÃ¶zÃ¶s osztÃ³jÃ¡t.
 int main()
 {
     int szam1, szam2;
     std::cin >> szam1;
     std::cin >> szam2;
 
-    int kozos = 1; // 1 ha mindig kozos
+    int kozos = 1; // 1 mindig kozos
     int div = 2;
     while (div <= szam1 && div <= szam2)
     {
