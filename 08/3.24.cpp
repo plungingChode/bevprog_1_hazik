@@ -11,7 +11,7 @@ int main()
 
     std::string max_str = "";
     std::string str;
-    std::getline(std::cin, str); // egyet be kell olvasni csak ugy, mert a cin nem eszi meg az ujsor karaktert
+    std::getline(std::cin, str); // egyet be kell olvasni csak ugy, mert a >> nem eszi meg az ujsor karaktert
 
     for (int i = 0; i < n; i++)
     {
