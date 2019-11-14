@@ -1,4 +1,5 @@
 #include <sstream>
+#include <cctype>
 
 // 6.14. Valósíts meg függvényt, amely egy szöveget átalakít úgy,
 //       hogy ha több whitespace karakter (szóköz, tab, újsor) van
@@ -9,7 +10,7 @@ std::string csak_egy_szokoz(std::string s)
     std::stringstream retVal;
     for (const char c : s)
     {
-        if (c == ' ' || c == '\n' || c == '\t')
+        if (std::isspace(c))
         {
             if (lehetSpace)
             {
