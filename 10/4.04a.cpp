@@ -2,89 +2,69 @@
 #include <fstream>
 #include <vector>
 
-// 4.1. Adott egy szövegfájl, ami egy recept hozzávalóit tartalmazza.
-//      A fájl minden sora egy számmal kezdődik, ami egy összetevőből
-//      szükséges mennyiség, majd vesszővel elválsztva tőle az összetevő neve jön.
-//  a.) Add meg azt az összetevőt, amiből a legtöbb, és amiből a legkevesebb kell.
-//  b.) Add meg, hány olyan összetevő van, amiből kevesebb, mint egy egységnyi kell.
-//  c ) Add meg egy tetszőleges összetevőről, hogy mennyi kell belőle.
-struct Osszetevo
+// 4.4. Adott egy szövegfájl, ami egy hónap minden napjának hőmérsékleti adatait tartalmazza:
+//      minden sorban három szám van, egy napon mért reggeli, déli és esti hőmérsékletet.
+//
+//      a.) Add meg a havi átlaghőmérsékletet.
+
+struct Nap
 {
-    double mennyiseg;
-    std::string nev;
+    double reggeli;
+    double deli;
+    double esti;
+
+    double atlag() const
+    {
+        return (reggeli + deli + esti) / 3;
+    }
 };
 
-std::vector<Osszetevo> read_file(std::fstream& f)
+std::vector<Nap> read_file(std::fstream& f)
 {
-    std::vector<Osszetevo> v;
-    while (f.good())
-    {
+    std::vector<Nap> v;
 
+    while(f.good())
+    {
         std::string line;
         std::getline(f, line);
-        unsigned int vesszo = line.find(',');
 
-        Osszetevo o;
-        o.mennyiseg = std::stod(line.substr(0, vesszo));
-        o.nev = line.substr(vesszo + 1);
-//        std::cout << o.mennyiseg << ',' << o.nev << '\n';
+        unsigned int szokoz1 = line.find(' ');
+        unsigned int szokoz2 = line.find(' ', szokoz1);
 
-        v.push_back(o);
+        Nap n;
+        n.reggeli = std::stod(line.substr(0, szokoz1));
+        n.deli = std::stod(line.substr(szokoz1 + 1, szokoz2));
+        n.esti = std::stod(line.substr(szokoz2 + 1));
+
+//        std::cout << n.reggeli << ' ' << n.deli << ' ' << n.esti << std::endl;
+
+        v.push_back(n);
     }
+
     return v;
 }
 
-void szelso(const std::vector<Osszetevo>& osszetevok)
+double havi_atlag(std::vector<Nap>& napok)
 {
-    Osszetevo max = osszetevok[0];
-    Osszetevo min = osszetevok[0];
+    double atlag = 0;
 
-    for (const Osszetevo& o : osszetevok)
+    for (const Nap& n : napok)
     {
-        if (o.mennyiseg > max.mennyiseg) max = o;
-        if (o.mennyiseg < min.mennyiseg) min = o;
+       atlag += n.atlag();
     }
 
-    std::cout << "Legtobb: " << max.nev << '\n';
-    std::cout << "Legkevesebb: " << min.nev << '\n';
-}
-
-void keves(const std::vector<Osszetevo>& osszetevok)
-{
-    int db = 0;
-
-    for (const Osszetevo& o : osszetevok)
-    {
-        if (o.mennyiseg < 1) db++;
-    }
-
-    std::cout << "Kevesebb, mint egy egyseg: " << db << " db\n";
-}
-
-void mennyi(const std::vector<Osszetevo>& osszetevok, std::string mi)
-{
-    for (const Osszetevo& o : osszetevok)
-    {
-        if (o.nev == mi)
-        {
-            std::cout << mi << ": " << o.mennyiseg << '\n';
-            return;
-        }
-    }
-    std::cout << mi << " nincs a receptben\n";
+    return atlag / napok.size();
 }
 
 int main()
 {
-    std::fstream f("4.01.input.txt");
+    std::fstream f("4.04.input.txt");
     if (f.good())
     {
-        std::vector<Osszetevo> osszetevok = read_file(f);
-        if (osszetevok.size() != 0)
+        std::vector<Nap> napok = read_file(f);
+        if (napok.size() != 0)
         {
-            szelso(osszetevok);
-            keves(osszetevok);
-            mennyi(osszetevok, "liszt");
+            std::cout << havi_atlag(napok) << std::endl;
         }
     }
     else
