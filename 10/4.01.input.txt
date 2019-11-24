@@ -1,0 +1,11 @@
+20,liszt
+14,cukor
+10,csokolade
+3,banan
+2,tojas
+1,joghurt
+5,vaj
+2.5,kakao
+1,vanilias cukor
+0.5,sutopor
+0.5,csipet so
