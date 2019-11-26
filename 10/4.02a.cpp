@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 
@@ -8,34 +8,31 @@
 
 struct Kontakt
 {
-    long long szam;
     std::string nev;
+    long long szam;
+
+    friend std::ostream& operator<<(std::ostream& s, const Kontakt& k)
+    {
+        s << k.nev << ", " << k.szam;
+        return s;
+    }
 };
 
-std::vector<Kontakt> read_file(std::ifstream& f)
+void read_file(std::ifstream& f, std::vector<Kontakt>& v)
 {
-    std::vector<Kontakt> v;
-
-    while(f.good())
+    while (f.good())
     {
-        std::string line;
-        std::getline(f, line);
-
-        unsigned int vesszo = line.find(',');
-
         Kontakt k;
-        k.szam = std::stoll(line.substr(vesszo + 1));
-        k.nev = line.substr(0, vesszo);
+        f >> std::ws;
+        std::getline(f, k.nev, ',');
+        f >> k.szam >> std::ws;
 
-//        std::cout << k.szam << ',' << k.nev << '\n';
-
+        //std:: cout << k << '\n';
         v.push_back(k);
     }
-
-    return v;
 }
 
-long long embert_keres(std::vector<Kontakt>& tfkonyv, std::string nev)
+long long nevhez_szam(std::vector<Kontakt>& tfkonyv, std::string nev)
 {
     long long szam = -1;
     for (const Kontakt& k : tfkonyv)
@@ -49,13 +46,13 @@ long long embert_keres(std::vector<Kontakt>& tfkonyv, std::string nev)
     return szam;
 }
 
-
 int main()
 {
     std::ifstream f("4.02.input.txt");
-    std::vector<Kontakt> tfkonyv = read_file(f);
+    std::vector<Kontakt> tfkonyv;
+    read_file(f, tfkonyv);
 
-    std::cout << embert_keres(tfkonyv, "Babosne Szigeti Ildiko") << std::endl;
+    std::cout << nevhez_szam(tfkonyv, "Babosne Szigeti Ildiko");
 
     return 0;
 }
