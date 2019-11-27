@@ -1,0 +1,38 @@
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=cp1250">
+</head>
+<body>
+<h1>
+BevProg Géptermi ZH, 2014.12.19.
+</h1>
+
+<h3> 1.feladat </h3>
+A mellékelt beugro_a illetve beugro_b program kiegészítése, hogy minden pontot megadjon a program. A programban már adott szöveget nem szabad módosítani, kizárólag a kommentjelzést szabad eltávolítani a main() függvényből. Munka közben javasolt folyamatosan haladni ellenoriz() függvényenként a kommentezés eltávolításával. A beugró akkor érvényes, ha minden pontot megkaptál, és nincs semmilyen módosítás a main() függvényben és az ellenoriz() makróban, illetve tilos új #define leírása is.
+<p>
+Figyelem: beugró nélkül nem értékeljük a második feladatot!
+
+<h3> 2.feladat </h3>
+A mellékelt budapest_kozbeszerzesek.csv nevű fájlban a budapesti megrendelésre kiírt közbeszerzések adatai olvashatóak a CRCB korrupciókutató intézet értékelésével (forrás: www.crcb.eu), az adatok nyilvánosak. A fájl tartalmaz fejléc sort, amiben az egyes mezők nevei vannak. A fájl két verzióban érhető el, egy az editorokkal könnyen olvasható formában, egy a DOS ablakban zömmel ékezethelyes formában.
+<p>
+A fájlban pontosvesszővel van elválasztva minden mező, egyéb pontosvessző karaktert a sorok nem tartalmaznak. A mezők tartalma rendre
+<p>
+<tt><b>ID;Közbeszerzési eljárás cime;Ajanlatkérő neve;Nyertes neve;Ár;Konzorciumi tagokra számolt ár;CRI;URL</b></tt>
+
+<p>ahol az ID a CRCB korrupciókutató intézet adatbázisának elem-azonosítója, az ár forintban értendő, a konzorcium cégcsoportot jelent (valahány részre elosztják az árat), az URL a kozbeszerzes.hu adatbázis vonatkozó linkje, a CRI a CRCB intézet által becsült "korrupció kockázat", ami az eljárás körülményeinek korrupcióra való alkalmasságát igyekszik megbecsülni. Fontos ezen a ponton megemlíteni, hogy a magas CRI nem jelent automatikusan korrupciót, csak azt, hogy ha a szereplők korrupcióra törekednének, akkor könnyű dolguk lenne az adott eljárásban. A CRI=-1 azt jelenti, hogy a CRI nem áll rendelkezésre, ezért azok minden kérdésből kimaradnak, ahol CRI megkötést használunk.
+<h4>Feladatok</h4>
+A csoport
+<p>
+1. Hány cég vett részt makulátlan eljárásban (CRI=0)?
+<br>2. Ki a megrendelője a legnagyobb összegű pályázatnak? (vigyázz a 32 bites egész tartomány határaira)
+<br>3. Melyik cég nyert legtöbbször viszonylag tiszta körülmények között (CRI kisebb mint 0.1) ?
+ 
+<p>
+B csoport
+<p>
+1. Sorold fel a cégeket, amelyek a legkevésbé gyanús körülmények között nyertek (CRI kisebb mint 0.05) 
+<br>2. Vannak az adatsorban olyan pályázatok, amelyek összege nem ábrázolható 32 bites előjeles egészben. Hány ilyen van?
+<br>3. Hány cég nyert csak egyszer?
+
+<h3>Pontozás</h3>
+Az irányadó pontozási forma a következő: 10 pont a sikeres beugró, az a) b) c) feladatok működése 10-10-10 pont, a második feladatban használt függvények eleganciája 10 pontig, a rekordok értelmes tervezése szintén 10 pontig értékelhet?, de összesen nem lehet több, mint az a) b) c) m?ködésre adott pontok összege - nem lehet nem m?köd? programra pontot kapni, csak mert szép.
+</body>
