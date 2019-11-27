@@ -1,0 +1,151 @@
+﻿
+<html>
+<head>
+<title>Feladatsor</title>
+<meta charset="utf-8">
+<style>
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+td, th, tr {
+	padding: 3px;
+	border: 1px solid black;
+}
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+<script>
+function toggle(id) {
+	if (document.getElementById(id).style.display == 'none')
+	    document.getElementById(id).style.display = 'block'
+	else
+    	document.getElementById(id).style.display = 'none';
+}
+</script>
+</head>
+<body>
+<h1>BevProg I Géptermi - Vizsga ZH I 2018.01.16.</h1>
+<h2>1. feladat</h2>
+<p>A mellékelt beugro_a illetve beugro_b program kiegészítése, hogy minden pontot megadjon a program. A programban már adott szöveget nem szabad módosítani, kizárólag a kommentjelzést szabad eltávolítani a main() függvényből. Munka közben javasolt folyamatosan haladni ellenoriz() függvényenként a kommentezés eltávolításával. A beugró akkor érvényes, ha minden feladat rész kész van, és nincs semmilyen módosítás a main() függvényben és az ellenoriz() makróban, illetve tilos új #define leírása is. Ha elkészültél jelezd egy felügyelőnek, aki értékeli a beugródat. </p>
+<p>Figyelem: érvényes beugró nélkül nem értékeljük a második feladatot! </p>
+<h2>2. feladat</h2>
+<p>A mellékelt NearStars.csv fájl a Naprendszerhez közeli csillagok adatait tartalmazó adatbázis. A fájlban az adatokat ';' választja el egymástól. Az egyes mezők leírása:</p>
+
+<p> Common Name - A csillag általános neve</br>
+Sibling - Multi naprendszerek (több csillag van a rendszer középpontjában) esetén a napok kiegészítő betűjele, egyébként üres mező </br>
+Equatorial Coordinates RA - Rektaszcenzió: jobboldali elfordulás az égi egyenlítőn (ekvatoriális koordináta rendszer lambda szöge: óra, perc)</br>
+Equatorial Coordinates DEC - Deklináció: elhajlás az égi egyenlítőtől (ekvatoriális koordináta rendszer phi szöge: fok, fokmásodperc)</br>
+Class - Spektrális osztály, azaz a csillag színkódja</br>
+Visual Magnitude - Látszólagos fényesség (0 hiányzó adatot és nem konkrét értéket jelent!)</br>
+Absolute Magnitude - Abszolút fényesség (10 parsec távolságból észlelt magnitudó)(0 hiányzó adatot és nem konkrét értéket jelent!)</br>
+Parallaxis (Prllx) - Paralaxis (milliívmásodperc) az a szög amely alatt a csillag egy külső pontból (Föld) látszik</br>
+Error - A paralaxis hibája</br>
+Distance (in ligthyear) - A csillag Nap-tól vett távolsága fényévekben</br>
+Gliese - A csillag Gliese kódja </br>
+Other Names/Notes - A csillag egyéb neve jegyzetei</br>
+</p>
+
+
+
+<p>
+Egy kis matek segítség: </br>
+- RA átváltása rad-ra: (óra+perc/60)/24*360*PI/180 (=lambda) </br>
+- DEC átváltása rad-ra: fok+fokmásodperc*60*PI/180 (=phi) </br>
+Ekvatoriális koordináta rendszerről Descartes koordináta rendszerre áttérés, ahol R a távolság:  </br>
+- X = R*cos(phi)*cos(lambda)  </br>
+- Y = R*cos(phi)*sin(lambda) </br>
+- Z = R*sin(phi) </br>
+Két térbeli pont p1(x1,y1,z1) illetve p2(x2,y2,z2) távolságának kiszámítása:  </br>
+- D = négyzetgyök( (X2-X1)^2 + (Y2-Y1)^2 + (Z2-Z1)^2 )  </br>
+</p>
+
+<h3>A csoport</h3>
+
+<ol><li>Mekkora a szabad szemmel látható (Látszólagos fényesség <=6) csillagok átlagos távolsága a Földtől?
+ (Az adat nélküli törpe csillagokat nem számítva)</li>
+
+
+<li>Melyik a második leggyakoribb csillag szín kód? </li>
+<li>Melyik két csillag van a legtávolabb egymástól az adatbázisban szereplők közül?</li>
+</ol>
+
+
+<h3>B csoport</h3>
+<ol>
+<li>Add meg külön-külön, hogy az egyes multi nap rendszerekből hány található az adatbázisban!</br>
+<i>Hány darab bináris naprendszer, hány darab trináris naprendszer stb.</i></li>
+
+<li>Határozd meg az adatbázison a relatív paralaxis hiba átlagát! Értelemszerűen a Napot (Sun) ne számold bele! (Relatív paralaxis hiba: paralaxis hiba/paralaxis*100) </br>
+Majd az átlagnál pontosabb mérési eredményekkel bíró csillagok közül határozd meg a legtávolabbit!</li>
+
+
+<li>Határozd meg azt a csillag párt, melyek a legtávolabb esnek egymástól!</li>
+</ol>
+
+
+<h2>Pontozás</h2>
+<p>Az irányadó pontozási forma a következő: 10 pont a sikeres beugró, az 1-2-3 részfeladatok működése 10-10-10 pont, a második feladatban használt függvények eleganciája 10 pontig, a rekordok értelmes tervezése szintén 10 pontig értékelhető, de összesen nem lehet több, mint az 1-2-3 működésre adott pontok összege - nem lehet nem működő programra pontot kapni, csak mert szép. A géptermi ZH sikeres teljesítéséhez minimum elérendő pont: 10 pont </p>
+</body>
+</html>
