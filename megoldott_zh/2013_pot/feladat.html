@@ -1,0 +1,54 @@
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+</head>
+<body>
+<h1>
+BevProg Géptermi ZH, 2013.12.20.
+</h1>
+
+<h3> 1.feladat </h3>
+A mellékelt beugro program kiegészítése, hogy minden pontot megadjon a program. A programban már adott szöveget nem szabad módosítani, kizárólag a kommentjelzést szabad eltávolítani a main() függvényből. Munka közben javasolt folyamatosan haladni ellenoriz() függvényenként a kommentezés eltávolításával. A beugró akkor érvényes, ha minden pontot megkaptál, és nincs semmilyen módosítás a main() függvényben és az ellenoriz() makróban, illetve tilos új #define leírása is.
+<p>
+Figyelem: beugró nélkül nem értékeljük a második feladatot!
+
+<h3> 2.feladat </h3>
+
+A mellékelt fájlban a világ 2008 és 2013 között regisztrált járványadatai találhatóak azon járványok körében, amikhez létezik védőoltás.
+(forrás: http://www.cfr.org/interactives/GH_Vaccine_Map/#map) 
+A letölthető adatokhoz képest a mellékelt fájl csak formátumtisztogatáson esett át (pl. nem-latin betűk törlése, sortörés karaktert tartalmazó szöveges mezők javítása), és az első sor törlése volt, amiben az egyes mezők voltak felsorolva, ez a sor az eredetiben így található:
+<p>
+<tt>
+Category,Outbreak,Location,Lat,Long,Date,Cases,Fatalities,Impact Scale,Source Citation,Source
+</tt>
+<p>
+Azaz kategória, járvány, helyszín (név, országnév, esetleg tartománnyal), helyszín szélességi fok, helyszín hosszúsági fok, időpont (nem kötött formátumban, néha intervallummal megadott), megbetegedések száma (-1 ha ismeretlen), halálos áldozatok száma, járvány súlyossági kód (pl. izolált eset: Isl), szakirodalmi hivatkozás, internetes hivatkozás
+<p>
+A kategóriák a következők:
+<p>
+<br>Measles (kanyaró)
+<br>Mumps (mumpsz)
+<br>Polio (gyermekbénulás)
+<br>Rubella (rózsahimlő)
+<br>Whooping Cough (szamárköhögés)
+<br>Other (egyéb)
+<p>
+Az alábbi feladatokat kell megoldani:
+
+<h4>A csoport</h4>
+
+a) hibás feltöltések: ahol ismeretlen a megbetegedések száma, de a halálos áldozatok száma ismert, ott a két érték megegyezésével is jelölhetik a megbetegedések számát. Sorold fel az ilyen tételeket!
+<p>
+b) Mekkora az átlagos mortalitási rátája (halálos áldozatok aránya a megbetegedésekhez képest) a kanyarónak? 
+<p>
+c) Melyik kategóriára igaz az az állítás, hogy a megbetegedések legalább kétharmada Afrikába (lat: -27 .. 36, long:-28 .. 62)  esik? Ennek a feladatnak a megoldásához engedélyezett többször is megnyitni a fájlt, és szabad feltételezni, hogy a fenti kategóriák fixek. Az a megoldás, ami egyik könnyítést sem használja ki, 10 extra pontot érdemel.
+
+<h4>B csoport</h4>
+
+a) A kategória és a járvány akkor egyezik meg, ha az adott betegség közönséges formájáról van szó. Sorold fel a különleges eseteket (és elírásokat), de ne sorold fel az egyéb-kategória elemeit!
+<p>
+b) Hány halálos áldozatot és hány megbetegedést követeltek a szamárköhögés járványok összesen?
+<p>
+c) Melyik kategóriára igaz az az állítás, hogy a halálos áldozatok legalább kétharmada Afrikába (lat: -27 .. 36, long:-28 .. 62)  esik? Ennek a feladatnak a megoldásához engedélyezett többször is megnyitni a fájlt, és szabad feltételezni, hogy a fenti kategóriák fixek. Az a megoldás, ami egyik könnyítést sem használja ki, 10 extra pontot érdemel.
+<h3>Pontozás</h3>
+A pontozás gyakorlatvezetőnként eltérő lehet, egy irányadó pontozási forma a következő: 10 pont a sikeres beugró, az a) b) c) feladatok működése 10-10-10 pont, a második feladatban használt függvények eleganciája 10 pontig, a rekordok értelmes tervezése szintén 10 pontig értékelhető, de összesen nem lehet több, mint az a) b) c) működésre adott pontok összege - nem lehet nem működő programra pontot kapni, csak mert szép.
+</body>
