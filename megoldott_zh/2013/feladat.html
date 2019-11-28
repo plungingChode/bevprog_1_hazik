@@ -1,0 +1,40 @@
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=cp1250">
+</head>
+<body>
+<h1>
+BevProg Géptermi ZH, 2013.12.20.
+</h1>
+
+<h3> 1.feladat </h3>
+A mellékelt beugro_a illetve beugro_b program kiegészítése, hogy minden pontot megadjon a program. A programban már adott szöveget nem szabad módosítani, kizárólag a kommentjelzést szabad eltávolítani a main() függvényből. Munka közben javasolt folyamatosan haladni ellenoriz() függvényenként a kommentezés eltávolításával. A beugró akkor érvényes, ha minden pontot megkaptál, és nincs semmilyen módosítás a main() függvényben és az ellenoriz() makróban, illetve tilos új #define leírása is.
+<p>
+Figyelem: beugró nélkül nem értékeljük a második feladatot!
+
+<h3> 2.feladat </h3>
+A mellékelt repterek.txt nevű fájlban az USA összes hivatalos reptere szerepel a GNIS adatbázisból. A formátum a webes adatbázisból letölthető formátum csekély módosításával a következő:
+<p> <tt>
+Reptér neve|Megye neve|Állam jele|Szélesség|Hosszúság|Tengerszint feletti magasság
+</tt>  <p>
+A szélesség és hosszúság fix karakterszámmal reprezentált, az S, N, E, W a négy égtáj szerinti félgömböt jelenti, a szám számjegyei pedig 2/3 karakteren fok, 2 karakteren szögperc, 2 karakteren szögmásodperc alakúak, ezeket követi a félgömb betűjele, pl. 295213N|1034204W az északi szélesség 29 fok 52 perc 13 másodpercen, és nyugati hosszúság 103 fok 42 perc 4 másodpercen van. A szögmásodperc és szögperc 60-ig skálázódik. A távolságot úgy becsüljük, hogy au észak-déli és kelet-nyugati <b>szögmásodpercben</b> kifejezett különbségekre, mint derékszögű háromszögre gondolva a pitagoraszi átfogó hosszúságot használjuk. Ez a valóságban nem pontos, de körülbelül igaz, és a ZH kereteit meghaladja a valósághűbb távolságszámítás.
+<br>
+A tengerszint feletti magasság lábban értendő.
+<p>
+<h4> A csoport </h4>
+a) Hány speciálisan helikoptereknek kialakított reptér van? (Helipad, Heliport, vagy Helistop)
+<br>
+b) Melyik Texas (TX) állam legmagasabban kialakított reptere?
+<br>
+c) Melyik két reptér között van a legnagyobb távolság az északi félteke nyugati hosszúságra esők közül?
+
+<h4> B csoport </h4>
+a) Hány reptér nevében NEM szerepel az "Airport" szó?
+<br>
+b) Mi Kalifornia (CA) reptereinek átlagos tengerszint feletti magassága?
+<br>
+c) Az azonos koordinátával bejegyzett reptereket nem számítva melyik a két legközelebbi reptér?
+
+
+<h3>Pontozás</h3>
+A pontozás gyakorlatvezetőnként eltérő lehet, egy irányadó pontozási forma a következő: 10 pont a sikeres beugró, az a) b) c) feladatok működése 10-10-10 pont, a második feladatban használt függvények eleganciája 10 pontig, a rekordok értelmes tervezése szintén 10 pontig értékelhető, de összesen nem lehet több, mint az a) b) c) működésre adott pontok összege - nem lehet nem működő programra pontot kapni, csak mert szép.
+</body>
