@@ -1,0 +1,47 @@
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+</head>
+<body>
+<h1>
+BevProg Géptermi ZH, 2012.12.20.
+</h1>
+
+<h3> 1.feladat </h3>
+A mellékelt beugro_a illetve beugro_b program kiegészítése, hogy minden pontot megadjon a program. A programban már adott szöveget nem szabad módosítani, kizárólag a kommentjelzést szabad eltávolítani a main() függvényből. Munka közben javasolt folyamatosan haladni ellenoriz() függvényenként a kommentezés eltávolításával. A beugró akkor érvényes, ha minden pontot megkaptál, és nincs semmilyen módosítás a main() függvényben és az ellenoriz() makróban, illetve tilos új #define leírása is.
+<p>
+Figyelem: beugró nélkül nem értékeljük a második feladatot!
+
+<h3> 2.feladat </h3>
+
+Adott egy fájlban a tantárgy weboldalának látottagottsági logja. Ebben minden sor egy lapletöltést jelent. A sorok szerkezete a következő:
+<p><tt>
+<br>2012-12-19 22:10:35 (CET) 178.48.104.60 direct
+<br>2012-12-19 22:21:33 (CET) 80.98.131.55 http://users.itk.ppke.hu/~surma/p/
+</tt>
+<p>
+Minden sor egy dátummal kezdődik, majd a letöltés pontos ideje következik, mellette az időzóna (CET) vagy (CEST), majd a látogató IP címe, és végül a referrer, vagyis annak a weboldalnak az URL-je, ahol a weboldal linkjére kattintottak. Ha ilyen nincs, akkor a tartalom az, hogy "direct", ez van akkor, ha begépelik a weboldal címét, vagy a kedvencekből választják ki. Az egyes mezőket pontosan egy darab szóköz választja el. A sorok időben rendezettek.
+
+ <p>
+ A feladat az adott csoport a) b) és c) feladatainak megoldása akár egy programban, akár több, külön programban. A programban használt függvények és rekordok szakszerűsége is számít, nem csak a helyes működés.
+ 
+ <h4>A csoport</h4>
+ 
+ a) A lekéréseknek mekkora aránya jut napközbenre (8-19 óra) százalékban?
+ <p>
+ b) Néha egy látogató sokszor letölti a weboldalt. Melyik IP címről csinálta a legtöbb olyan oldalletöltést, amikor más nem szakította meg a letöltéseit? (más szavakkal, ugyanaz az IP egymást követő sorokban)
+ <p>
+ c) A referrer sokszor egy keresőoldal. Feltéve, hogy az URL-ben a keresőszó egy "q=" után következik az első & karakterig, ahol a "q=" előtt közvetelnül & vagy ? karakter áll, melyik a leggyakrabban használt keresőszó? Hány találattal?
+ 
+ 
+ 
+ <h4>B csoport</h4>
+
+a) A lekéréseknek mekkora aránya jut nyárra, őszi, illetve tavaszi félévre? (7-8, 9-1, 2-6) százalékban?
+<p>
+b) A 2011-es évben melyik nap volt a legtöbb oldalletöltés?
+<p>
+c) Néha egy látogató többször is letölti a weboldalt. Melyik IP címről érkezett a legtöbb direkt letöltés? Hány letöltéssel?
+
+<h3>Pontozás</h3>
+A pontozás gyakorlatvezetőnként kis mértékben eltérő lehet, egy irányadó pontozási forma a következő: 10 pont a sikeres, teljes beugró, az a) b) c) feladatok működése 10-10-10 pont, a második feladatban használt függvények eleganciája 10 pontig, a rekordok értelmes tervezése szintén 10 pontig értékelhető, de összesen nem lehet több, mint az a) b) c) működésre adott pontok összege - nem lehet nem működő programra pontot kapni, csak mert szép.
+</body>
